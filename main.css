@@ -1,0 +1,153 @@
+:root {
+    --centralWidth: 50em;
+    --mainboxmarginsWidth: 1em;
+    
+    --darkgrayColor: #555555;
+    --lightgrayColor: #777777;
+    --darkredColor: #1B446B;
+    --darkredactiveColor: #092D4E;
+    --lightredColor: #CC2222;
+
+    --dropdownColor: #f6f6f6;
+    --dropdownhoverColor: #eaeaea;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+body {
+    background-image: url("images/background.jpg");
+    background-repeat: repeat;
+    background-size: 400px 400px;
+}
+
+#right {
+    float: right;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: var(--darkredColor);
+}
+
+.banner {
+    position: relative;
+    text-align: left;
+    left: -1.15em;
+}
+
+.banner span {
+    line-height: 1.5em;
+    margin-left: 0rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+}
+
+
+.whiteb {
+    font: bold 1em Helvetica, sans-serif;
+    color: var(--darkgrayColor);
+    background: white;
+    margin-left: 0rem;
+}
+
+.redb {
+    font: bold 2em Helvetica, sans-serif;
+    color: white;
+    background: var(--darkredColor);
+    margin-left: 0rem;
+}
+
+.centered_box {
+    position: static;
+    width: 670px;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1em;
+    background: white;
+    border-style: solid;
+    border-width: medium;
+    border-color: var(--darkredColor);
+}
+
+.centered_box_new {
+    position: static;
+    margin-top: 1rem;
+    width: 710px;
+    padding: 1em;
+    background: white;
+    border-style: solid;
+    border-width: medium;
+    border-color: var(--darkredColor);
+}
+
+#centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Top menu horizontal */
+.topnav {
+    overflow: hidden;
+    position: static;
+    background-color: var(--darkredColor);
+    width: 710px;
+    margin: auto;
+}
+
+.topnav a {
+  float: left;
+  color: var(--dropdownColor);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: var(--darkredactiveColor);
+  color: white;
+}
+
+.topnav a.active {
+  background-color: var(--darkredactiveColor);
+  color: white;
+}
+.top {
+  overflow: hidden;
+  background-color: var(--dropdownColor);
+  font-size: 24px;
+  color: var(--darkredColor);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 14px 16px;
+  text-align: left;
+}
+
+
+span.ltrText {
+    unicode-bidi: bidi-override;
+    direction: rtl
+}
+
+/* Red bullet*/
+ul {
+  list-style: none; /* Remove default bullets */
+}
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--darkredColor); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
