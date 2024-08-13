@@ -1,36 +1,72 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Jakub Martinka",
+    "label": "PhD candidate",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
+    "email": "jakub.martinka@jh-inst.cas.cz",
+    "phone": "+420 604 310 006",
+    "url": "https://jakubmartinka.github.io",
     "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "city": "Prague",
+      "countryCode": "CZE",
+      "region": "Czech Republic"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "X",
+        "username": "jakub_martinka_",
+        "url": "https://x.com/jakub_martinka_"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
+      "name": "UniCredit Bank Czech Republic and Slovakia, a.s.",
+      "position": "Intranet Editor",
+      "url": "",
+      "startDate": "2020-09-01",
+      "endDate": "present",
+      "summary": "Created and edited intranet pages.",
+      "highlights": ["HTML"]
+    },
+	{
+      "name": "̌Československá obchodnı́ banka",
+      "position": "Web Content Editor",
+      "url": "",
+      "startDate": "2022-07-01",
+      "endDate": "2022-11-01",
       "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "highlights": ["JavaScript"]
+    },
+	{
+      "name": "J. Heyrovsky Institute of Physical Chemistry, CAS CR",
+      "position": "Researcher PhD Student",
+      "url": "",
+      "startDate": "2018-10-01",
+      "endDate": "present",
+      "summary": "Worked at the department of Theoretical Chemistry.",
+      "highlights": ["Turbomole"]
+    },
+	{
+      "name": "Private lessons, Top Learning s.r.o.",
+      "position": "Lecturer",
+      "url": "",
+      "startDate": "2015-09-01",
+      "endDate": "present",
+      "summary": "Tutored in Math, Physics, and Chemistry.",
+      "highlights": [""]
+    },
+	{
+      "name": "Charles University, Faculty of Science, Department of Biochemistry",
+      "position": "",
+      "url": "",
+      "startDate": "2020-11-01",
+      "endDate": "2021-05-01",
+      "summary": "Created 3D models of organelles and proteins for a new textbook.",
+      "highlights": ["Blender"]
     }
   ],
   "volunteer": [
@@ -47,16 +83,38 @@
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
+      "institution": "Faculty of Science, Charles University",
+      "location": "Prague, Czech Republic",
+      "url": "https://www.natur.cuni.cz/eng",
+      "area": "Modeling of chemical nanostructures and biostructures",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
+      "startDate": "2023-10-01",
+      "endDate": "present",
       "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
+      "courses": ["Excited state molecular dynamics with non-adiabatic and spin-orbit effects assisted by machine learning"]
+    },
+    {
+      "institution": "Faculty of Science, Charles University",
+      "location": "Prague, Czech Republic",
+      "url": "https://www.natur.cuni.cz/eng",
+      "area": "Physical chemistry",
+      "studyType": "MSc",
+      "startDate": "2020-10-01",
+      "endDate": "2022-09-30",
+      "score": "10",
+      "courses": ["Non-adiabatic molecular dynamics of photochemical processes accelerated by machine learning"]
+    },
+	{
+      "institution": "Faculty of Science, Charles University",
+      "location": "Prague, Czech Republic",
+      "url": "https://www.natur.cuni.cz/eng",
+      "area": "Biochemistry",
+      "studyType": "BSc",
+      "startDate": "2017-10-01",
+      "endDate": "2020-09-30",
+      "score": "10",
+      "courses": ["Molecular modeling of the interaction between cytochrome P450s and their substrates/products"]
+    }	  
   ],
   "awards": [
     {
@@ -151,15 +209,20 @@
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Czech",
       "fluency": "Native speaker",
       "icon": ""
     },
     {
       "language": "English",
-      "fluency": "Fluent",
+      "fluency": "C1",
       "icon": ""
-    }
+    },
+	{
+	  "language": "German",
+	  "fluency": "A2",
+	  "icon": ""
+	}
   ],
   "interests": [
     {
