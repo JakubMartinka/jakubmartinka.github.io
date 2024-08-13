@@ -7,7 +7,7 @@ Charles University</a>.
 
 profile:
   align: right
-  image: JakubMartinka2.jpg
+  image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>103</p>
