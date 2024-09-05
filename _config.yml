@@ -46,9 +46,9 @@ rss_icon: true
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: false
+navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false
 socials_in_search: true
 bib_search: true
 
@@ -631,8 +631,9 @@ jekyll_get_json:
     json: assets/json/resume.json # it can also be an url
 jsonresume:
   - basics
-  - work
   - education
+  - work
+  - popularization
   - publications
   - projects
   - volunteer

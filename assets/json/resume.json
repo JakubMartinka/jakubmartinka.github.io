@@ -22,6 +22,41 @@
       }
     ]
   },
+  "education": [
+    {
+      "institution": "Faculty of Science, Charles University",
+      "location": "Prague, Czech Republic",
+      "url": "https://www.natur.cuni.cz/eng",
+      "area": "Modeling of chemical nanostructures and biostructures",
+      "studyType": "PhD",
+      "startDate": "2023-10-01",
+      "endDate": "present",
+      "score": "10",
+      "courses": ["Excited state molecular dynamics with non-adiabatic and spin-orbit effects assisted by machine learning"]
+    },
+    {
+      "institution": "Faculty of Science, Charles University",
+      "location": "Prague, Czech Republic",
+      "url": "https://www.natur.cuni.cz/eng",
+      "area": "Physical chemistry",
+      "studyType": "MSc",
+      "startDate": "2020-10-01",
+      "endDate": "2022-09-30",
+      "score": "10",
+      "courses": ["Non-adiabatic molecular dynamics of photochemical processes accelerated by machine learning"]
+    },
+	{
+      "institution": "Faculty of Science, Charles University",
+      "location": "Prague, Czech Republic",
+      "url": "https://www.natur.cuni.cz/eng",
+      "area": "Biochemistry",
+      "studyType": "BSc",
+      "startDate": "2017-10-01",
+      "endDate": "2020-09-30",
+      "score": "10",
+      "courses": ["Molecular modeling of the interaction between cytochrome P450s and their substrates/products"]
+    }	  
+  ],
   "work": [
     {
       "name": "UniCredit Bank Czech Republic and Slovakia, a.s.",
@@ -33,7 +68,7 @@
       "highlights": ["HTML"]
     },
 	{
-      "name": "̌Československá obchodnı́ banka",
+      "name": "Československá obchodnı́ banka",
       "position": "Web Content Editor",
       "url": "",
       "startDate": "2022-07-01",
@@ -69,7 +104,7 @@
       "highlights": ["Blender"]
     }
   ],
-  "Popularization": [
+  "popularization": [
     {
       "organization": "Ask a scientist",
       "location": "Prague, Czech Republic",
@@ -104,41 +139,6 @@
       "endDate": "present",
       "highlights": ["Běstvina 2024", "AI in context 2023", "Science fair 2023/2024", "Student conference at J. Heyrovský Institute 2023/2024", "FameLab 2022", "Falling Walls Lab 2022"]
 	}
-  ],
-  "education": [
-    {
-      "institution": "Faculty of Science, Charles University",
-      "location": "Prague, Czech Republic",
-      "url": "https://www.natur.cuni.cz/eng",
-      "area": "Modeling of chemical nanostructures and biostructures",
-      "studyType": "PhD",
-      "startDate": "2023-10-01",
-      "endDate": "present",
-      "score": "10",
-      "courses": ["Excited state molecular dynamics with non-adiabatic and spin-orbit effects assisted by machine learning"]
-    },
-    {
-      "institution": "Faculty of Science, Charles University",
-      "location": "Prague, Czech Republic",
-      "url": "https://www.natur.cuni.cz/eng",
-      "area": "Physical chemistry",
-      "studyType": "MSc",
-      "startDate": "2020-10-01",
-      "endDate": "2022-09-30",
-      "score": "10",
-      "courses": ["Non-adiabatic molecular dynamics of photochemical processes accelerated by machine learning"]
-    },
-	{
-      "institution": "Faculty of Science, Charles University",
-      "location": "Prague, Czech Republic",
-      "url": "https://www.natur.cuni.cz/eng",
-      "area": "Biochemistry",
-      "studyType": "BSc",
-      "startDate": "2017-10-01",
-      "endDate": "2020-09-30",
-      "score": "10",
-      "courses": ["Molecular modeling of the interaction between cytochrome P450s and their substrates/products"]
-    }	  
   ],
   "_comment": [
     {
@@ -218,17 +218,6 @@
   ],
   "skills": [
 	{
-      "name": "Chemistry",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Physical chemistry",
-		"Quantum chemistry",
-		"Computational chemistry",
-		"Quantum theory"
-      ]
-    },
-	{
       "name": "Calculations & Simulations",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
@@ -246,7 +235,7 @@
       "icon": "fa-solid fa-hashtag",
       "keywords": [
         "C/C++",
-        "Python",
+        "Python/Jupyter lab",
         "bash",
         "HTML/CSS",
         "LaTeX",
@@ -258,22 +247,22 @@
     {
       "language": "Czech",
       "fluency": "Native speaker",
-      "icon": "fa-c"
+      "icon": "fa-solid fa-c"
     },
     {
       "language": "English",
       "fluency": "C1",
-      "icon": "fa-e"
+      "icon": "fa-solid fa-e"
     },
 	{
 	  "language": "German",
 	  "fluency": "A2",
-	  "icon": "fa-g"
+	  "icon": "fa-solid fa-g"
 	},
 	{
 	  "language": "Japanese",
 	  "fluency": "A0",
-	  "icon": "fa-j"
+	  "icon": "fa-solid fa-j"
 
 	}
   ],
