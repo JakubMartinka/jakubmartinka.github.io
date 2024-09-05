@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>.
+subtitle: <a href='https://www.jh-inst.cas.cz/department/department-of-theoretical-chemistry#department'>J. Heyrovský Institute of Physical Chemistry, Academy of Sciences of the Czech Republic</a><br><a href='https://physchem.cz/'>Department of Physical and Macromolecular Chemistry, Faculty of Sciences, Charles University</a>.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>103</p>
+    <p>Room: 103</p>
     <p>Dolejškova 2155/3, 182 23</p>
     <p>Prague 8, Czech Republic</p>
 
@@ -18,7 +18,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi, I'm a Ph.D. student at the [Faculty of Science](https://www.natur.cuni.cz/eng) of [Charles University](https://en.wikipedia.org/wiki/Charles_University) in Prague, working at the [Department of Theoretical chemistry](https://www.jh-inst.cas.cz/department/department-of-theoretical-chemistry#department) at the Institute of Physical Chemistry [J. Heyrovský](https://en.wikipedia.org/wiki/Jaroslav_Heyrovsk%C3%BD), [Czech Academy of Sciences](https://www.avcr.cz/en/) in [Jiří Pittner's group](https://www.jh-inst.cas.cz/~pittner/). I try to share my interest in science during my private teaching of natural sciences, which I started already in high school. Talking about science is amazing and that is why I would also like to devote myself to popularizing science in the future, if you are interested in a popularization-style presentation about the work within our group (machine learning and quantum chemistry) please do not hesitate to contact me!
+Hi, I'm a Ph.D. student at the [Faculty of Science](https://www.natur.cuni.cz/eng) at [Charles University](https://en.wikipedia.org/wiki/Charles_University) in Prague. I work in the [Department of Theoretical chemistry](https://www.jh-inst.cas.cz/department/department-of-theoretical-chemistry#department), part of the Institute of Physical Chemistry [J. Heyrovský](https://en.wikipedia.org/wiki/Jaroslav_Heyrovsk%C3%BD), [Czech Academy of Sciences](https://www.avcr.cz/en/) (CAS), as a member of [Jiří Pittner's group](https://www.jh-inst.cas.cz/~pittner/). I’m passionate about sharing my love for science and have been teaching natural sciences since high school. Teaching and communicating science is incredibly fulfilling to me, and I hope to continue in the future. 
+I am participating in a Czech science popularization project called [Zeptej se vědce](https://x.com/zeptej_se_vedce) ("Ask a Scientist"), where scientists answer (sometimes ridiculous) questions, as well as the CAS project [Otevřená Věda](https://www.otevrenaveda.cz/cs/index.html) ("Open Science") for motivated high school students. If you would like to learn more about our group’s research (focusing on machine learning and quantum chemistry) or about me, feel free to reach out!
 
-I come from the eastern part of the Czech Republic, [Moravia](https://en.wikipedia.org/wiki/Moravia), the land of wine and slivovice. I grew up in [Zlín](https://en.wikipedia.org/wiki/Zl%C3%ADn) (and studied here at the [Gymnasium Zlín - Lesní čtvrť](https://www.gymzl.cz/en/)). The [Baťa](https://en.wikipedia.org/wiki/Bata_Corporation) brand was founded in this city and thanks to this the city has its functionalist character, among other things there is also a [sculpture](https://www.google.com/search?q=velk%C3%BD+fibonacci&client=firefox-b-d&sxsrf=ALiCzsZIh4h6ZRc-rxthav5tN6aC8Z3LgA:1669505332124&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj8g5aCgM37AhVcSPEDHcnbAFEQ_AUoAXoECAEQAw&biw=948&bih=895&dpr=1) expressing the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number). I am an amateur chess player and as part of that I have also helped out at some chess events and even acted as a referee. I like to travel and have meaningless conversations with interesting people I meet.
+I come from the eastern part of the Czech Republic, [Moravia](https://en.wikipedia.org/wiki/Moravia), the land of wine and slivovice. I grew up in [Zlín](https://en.wikipedia.org/wiki/Zl%C3%ADn), where I studied at the [Gymnasium Zlín - Lesní čtvrť](https://www.gymzl.cz/en/)). Zlín is notable for its [Baťa](https://en.wikipedia.org/wiki/Bata_Corporation) heritage, and the city's functionalist character. One of my favourite nerdy landmarks is a [sculpture](https://www.google.com/search?q=velk%C3%BD+fibonacci&client=firefox-b-d&sxsrf=ALiCzsZIh4h6ZRc-rxthav5tN6aC8Z3LgA:1669505332124&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj8g5aCgM37AhVcSPEDHcnbAFEQ_AUoAXoECAEQAw&biw=948&bih=895&dpr=1) based on the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number). I am an amateur [chess](https://lichess.org/@/JakeFox) player and I've had the opportunity to assist at few chess events, sometimes as a referee. I also love traveling and striking up interesting conversations with people I meet along the way.
+
+I wrote these pages as an experiment because I enjoy reading about other people. If you want to talk with me about something else than science, you try philosophy of science, travelling, chess, rock climbing or football.
 

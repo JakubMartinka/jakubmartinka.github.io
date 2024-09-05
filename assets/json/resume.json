@@ -6,10 +6,10 @@
     "email": "jakub.martinka@jh-inst.cas.cz",
     "phone": "+420 604 310 006",
     "url": "https://jakubmartinka.github.io",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "summary": "The topic of my PhD thesis is: Excited state molecular dynamics with non-adiabatic and spin-orbit effects assisted by machine learning",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
+      "address": "Dolejškova 2155/3",
+      "postalCode": "182 23",
       "city": "Prague",
       "countryCode": "CZE",
       "region": "Czech Republic"
@@ -69,17 +69,41 @@
       "highlights": ["Blender"]
     }
   ],
-  "volunteer": [
+  "Popularization": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
+      "organization": "Ask a scientist",
+      "location": "Prague, Czech Republic",
+      "position": "Answers/Review/Events",
+      "url": "https://x.com/Zeptej_se_vedce",
+      "startDate": "2023-05-01",
+      "endDate": "present",
+      "summary": "Answering questions."
+    },
+	{
+      "organization": "Chem Quest",
+      "location": "Prague, Czech Republic",
+      "position": "Member of committee",
+      "url": "https://www.vscht.cz/spoluprace/skoly/pro-zaky/chemquest",
+      "startDate": "2024",
+      "summary": "Project where groups of elementary/high school students are presenting chemistry experiments."
+    },
+	{
+      "organization": "Open Science",
+      "location": "Prague, Czech Republic",
+      "position": "Supervisor",
+      "url": "https://www.otevrenaveda.cz/cs/index.html",
+      "startDate": "2023-01-01",
+      "endDate": "2024-12-31",
+      "summary": "Computer simulations of molecules after radiation absorption using machine learning"
+    },
+	{
+      "organization": "Presentations",
+      "location": "Prague, Czech Republic",
+      "position": "Speaker",
+      "startDate": "2022",
+      "endDate": "present",
+      "highlights": ["Běstvina 2024", "AI in context 2023", "Science fair 2023/2024", "Student conference at J. Heyrovský Institute 2023/2024", "FameLab 2022", "Falling Walls Lab 2022"]
+	}
   ],
   "education": [
     {
@@ -116,7 +140,7 @@
       "courses": ["Molecular modeling of the interaction between cytochrome P450s and their substrates/products"]
     }	  
   ],
-  "awards": [
+  "_comment": [
     {
       "title": "Nobel Prize in Physics",
       "date": "1921-11-01",
@@ -125,16 +149,16 @@
       "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
     }
   ],
-  "certificates": [
+  "_comment": [
     {
-      "name": "Machine Learning",
+      "name": "Machine Learning certificate",
       "date": "2018-01-01",
       "issuer": "Stanford University",
       "url": "https://example.com",
       "icon": "fa-solid fa-location-dot"
     },
     {
-      "name": "Quantum Computing",
+      "name": "Quantum Computing certificate",
       "date": "2018-01-01",
       "issuer": "Stanford University",
       "url": "https://example.com",
@@ -169,9 +193,9 @@
       "icon": "fa-solid fa-clipboard-check"
     }
   ],
-  "publications": [
+  "_comment": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
+      "name": "Publications",
       "publisher": "Annalen der Physik",
       "releaseDate": "1905-06-30",
       "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
@@ -193,17 +217,40 @@
     }
   ],
   "skills": [
-    {
-      "name": "Physics",
+	{
+      "name": "Chemistry",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Physical chemistry",
+		"Quantum chemistry",
+		"Computational chemistry",
+		"Quantum theory"
+      ]
+    },
+	{
+      "name": "Calculations & Simulations",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Turbomole",
+        "MOLPRO",
+        "COLUMBUS",
+        "Newton-X",
+        "MLatom"
+      ]
+    },
+    {
+      "name": "Computer",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "C/C++",
+        "Python",
+        "bash",
+        "HTML/CSS",
+        "LaTeX",
+        "git/GitHub"
       ]
     }
   ],
@@ -211,22 +258,28 @@
     {
       "language": "Czech",
       "fluency": "Native speaker",
-      "icon": ""
+      "icon": "fa-c"
     },
     {
       "language": "English",
       "fluency": "C1",
-      "icon": ""
+      "icon": "fa-e"
     },
 	{
 	  "language": "German",
 	  "fluency": "A2",
-	  "icon": ""
+	  "icon": "fa-g"
+	},
+	{
+	  "language": "Japanese",
+	  "fluency": "A0",
+	  "icon": "fa-j"
+
 	}
   ],
-  "interests": [
+  "_comment": [
     {
-      "name": "Physics",
+      "name": "Interests",
       "icon": "fa-solid fa-tag",
       "keywords": [
         "Quantum Mechanics",
@@ -238,9 +291,9 @@
       ]
     }
   ],
-  "references": [
+  "_comment": [
     {
-      "name": "Professor John Doe",
+      "name": "References",
       "icon": "fa-solid fa-laptop",
       "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     },
@@ -250,9 +303,9 @@
       "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     }
   ],
-  "projects": [
+  "_comment": [
     {
-      "name": "Quantum Computing",
+      "name": "Projects",
       "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
       "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
       "startDate": "2018-01-01",
