@@ -1,6 +1,7 @@
 ---
 layout: page
-title: My Travel Map
+permalink: /travelmap.html
+title: travel map
 css: [../plugins/travelmap/css/custom.css']
 nav: true
 nav_order: 6
