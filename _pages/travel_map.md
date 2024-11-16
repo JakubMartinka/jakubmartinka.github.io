@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: page
 title: My Travel Map
 css: [../plugins/travelmap/css/custom.css']
+nav: true
+nav_order: 6
 ---
-
-
 
 <!DOCTYPE html>
 <html lang="en">
