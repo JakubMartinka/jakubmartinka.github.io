@@ -72,7 +72,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 acm_id: # your dl.acm.org/profile/id
 blogger_url: # your blogger URL
-bluesky_url: # your bluesky URL
+bluesky_url: https://bsky.app/profile/jakubmartinka.bsky.social
 dblp_url: # your DBLP profile url
 discord_id: # your disciord id (18-digit unique numerical identifier)
 facebook_id: # your facebook id
@@ -311,8 +311,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Martinka]
+  first_name: [Jakub]
 
   style: apa
   locale: en
