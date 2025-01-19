@@ -1,6 +1,6 @@
 ---
 layout: cv
-permalink: https://jakubmartinka.github.io/assets/pdf/CV_JakubMartinka.pdf
+permalink: /assets/pdf/CV_JakubMartinka.pdf
 title: cv
 nav: true
 nav_order: 5
