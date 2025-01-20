@@ -539,7 +539,7 @@ hr {
 	margin: 0 auto;
 	padding: 0 0;
 	background-color: transparent;
-	min-width: 220px;
+	min-width: 800px;
 }
 #map_base svg {
 	max-height: 100%;
