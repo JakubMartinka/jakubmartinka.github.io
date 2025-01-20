@@ -97,7 +97,7 @@
 -
   index: 'map_20'
   country_name: 'BOSNIA AND HERZEGOVINA'
-  visited: false
+  visited: true
 
 -
   index: 'map_21'
@@ -142,7 +142,7 @@
 -
   index: 'map_29'
   country_name: 'CANADA'
-  visited: false
+  visited: true
 
 -
   index: 'map_30'
@@ -162,7 +162,7 @@
 -
   index: 'map_33'
   country_name: 'CHINA'
-  visited: True
+  visited: true
 
 -
   index: 'map_34'
@@ -187,7 +187,7 @@
 -
   index: 'map_38'
   country_name: 'CROATIA'
-  visited: false
+  visited: true
 
 -
   index: 'map_39'
@@ -217,7 +217,7 @@
 -
   index: 'map_44'
   country_name: 'DENMARK'
-  visited: false
+  visited: true
 
 -
   index: 'map_45'
@@ -257,7 +257,7 @@
 -
   index: 'map_52'
   country_name: 'ESTONIA'
-  visited: false
+  visited: true
 
 -
   index: 'map_53'
@@ -272,7 +272,7 @@
 -
   index: 'map_55'
   country_name: 'FINLAND'
-  visited: false
+  visited: true
 
 -
   index: 'map_56'
@@ -307,7 +307,7 @@
 -
   index: 'map_62'
   country_name: 'GREECE'
-  visited: false
+  visited: true
 
 -
   index: 'map_63'
@@ -347,7 +347,7 @@
 -
   index: 'map_70'
   country_name: 'HUNGARY'
-  visited: false
+  visited: true
 
 -
   index: 'map_71'
@@ -357,7 +357,7 @@
 -
   index: 'map_72'
   country_name: 'INDIA'
-  visited: false
+  visited: true
 
 -
   index: 'map_73'
@@ -382,7 +382,7 @@
 -
   index: 'map_77'
   country_name: 'ISREAL'
-  visited: false
+  visited: true
 
 -
   index: 'map_78'
@@ -437,7 +437,7 @@
 -
   index: 'map_88'
   country_name: 'LATVIA'
-  visited: false
+  visited: true
 
 -
   index: 'map_89'
@@ -467,7 +467,7 @@
 -
   index: 'map_94'
   country_name: 'LITHUANIA'
-  visited: false
+  visited: true
 
 -
   index: 'map_95'
@@ -497,7 +497,7 @@
 -
   index: 'map_100'
   country_name: 'MALDIVES'
-  visited: false
+  visited: true
 
 -
   index: 'map_101'
@@ -567,7 +567,7 @@
 -
   index: 'map_114'
   country_name: 'NETHERLANDS'
-  visited: false
+  visited: true
 
 -
   index: 'map_115'
@@ -642,7 +642,7 @@
 -
   index: 'map_129'
   country_name: 'POLAND'
-  visited: false
+  visited: true
 
 -
   index: 'map_130'
@@ -707,12 +707,12 @@
 -
   index: 'map_142'
   country_name: 'SLOVAKIA'
-  visited: false
+  visited: true
 
 -
   index: 'map_143'
   country_name: 'SLOVENIA'
-  visited: false
+  visited: true
 
 -
   index: 'map_144'
@@ -732,7 +732,7 @@
 -
   index: 'map_147'
   country_name: 'SOUTH KOREA'
-  visited: false
+  visited: true
 
 -
   index: 'map_148'
@@ -742,12 +742,12 @@
 -
   index: 'map_149'
   country_name: 'SPAIN'
-  visited: false
+  visited: true
 
 -
   index: 'map_150'
   country_name: 'SRI LANKA'
-  visited: false
+  visited: true
 
 -
   index: 'map_151'
@@ -767,7 +767,7 @@
 -
   index: 'map_154'
   country_name: 'SWEDEN'
-  visited: false
+  visited: true
 
 -
   index: 'map_155'
@@ -822,7 +822,7 @@
 -
   index: 'map_165'
   country_name: 'TUNISIA'
-  visited: false
+  visited: true
 
 -
   index: 'map_166'
