@@ -251,8 +251,6 @@ nav_order: 6
     }
 </script> 
 
-
-<!-- where am I from -->
 <script type="text/javascript">
 var pin_config = {
     'default':{     'pinShadow':'#000',     'pinShadowOpacity':'50',    },
@@ -261,8 +259,8 @@ var pin_config = {
     {
         'shape':'circle',
         'hover': 'I\'m from Zlín, Czech republic',
-        'pos_X':400,
-        'pos_Y':220,
+        'pos_X':420,
+        'pos_Y':240,
         'diameter':12,
         'outline':'#FFCECE',
         'thickness':1,
@@ -274,5 +272,4 @@ var pin_config = {
     ]
 }
 </script>
-
 
