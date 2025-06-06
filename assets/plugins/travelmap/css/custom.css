@@ -501,6 +501,8 @@ hr {
 }
 .map-preview {
 	padding-top: 10px;
+	width: 930px;
+	height: 170px;
 }
 #left-content {
 	display: block;
