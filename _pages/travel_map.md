@@ -18,13 +18,13 @@ nav_order: 6
 <tbody>
 <tr class="color" bgcolor="#F8B2A3">  
   <td class="color-name">
-    <h4>Visited</h4>
+    <h4 style="color: black;">Visited</h4>
   </td>
 </tr>
 
 <tr class="color" bgcolor="CFF7F9">
   <td class="color-name">
-    <h4>Unvisited</h4>
+    <h4 style="color: black;">Unvisited</h4>
   </td>
 </tr>
 </tbody>
@@ -37,7 +37,7 @@ nav_order: 6
   <div class="container">
     <div class="prev">
       <div id="mapwrapper">
-        <div id="map_base"> <svg version="1.1" width="930" height="446" viewBox="0 0 930 446" xml:space="preserve">
+        <div id="map_base"> <svg version="1.1" width="930" height="446" viewBox="0 0 930 500" xml:space="preserve">
           <g id="countries">
             <path id="map_1" vector-effect="non-scaling-stroke" fill="#EBECED" d="M666.931,154.749c-1.485-6.81-7.11,5.604-11.036,2.338c-0.738-0.615-3.502,0.704-3.502-0.765c-9.55,0.765-6.366,9.55-14.962,6.578c0.637,7.11-2.53,3.268,0.85,13.689c1.272,3.926,6.261-1.274,1.272,7.641c4.67,1.061,17.87,2.784,16.447-2.547c-1.272-4.775,8.384-1.91,7.853-7.004c-0.53-5.094,6.686-3.608,4.352-7.429c-0.901-1.474,3.582-2.334-0.425-5.837c-1.439-1.258,7.209-1.551,9.339-4.455C670.664,154.044,669.044,164.439,666.931,154.749z"/>
             <path id="map_2" vector-effect="non-scaling-stroke" fill="#EBECED" d="M513.914,143.8c-1.804,0.425-1.804-3.714-1.38-4.244c-0.425-0.694-1.839-1.495-1.839-1.83c-1.264-0.024-1.778,0.857-1.875,2.253c1.805,2.548-1.556,2.653,2.122,8.065C512.534,143.481,512.534,148.895,513.914,143.8z"/>
