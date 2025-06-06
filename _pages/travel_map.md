@@ -9,7 +9,6 @@ nav_order: 6
 
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="{{site.baseurl}}/assets/plugins/travelmap/css/bootstrap.css"/>
 <link rel="stylesheet" href="{{site.baseurl}}/assets/plugins/travelmap/css/custom.css"/>
 </head>
 
