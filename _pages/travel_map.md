@@ -258,8 +258,8 @@ var pin_config = {
     {
         'shape':'circle',
         'hover': 'I\'m from Zlín, Czech republic',
-        'pos_X':450,
-        'pos_Y':300,
+        'pos_X':500,
+        'pos_Y':200,
         'diameter':12,
         'outline':'#FFCECE',
         'thickness':1,
