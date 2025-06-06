@@ -2,7 +2,7 @@
 layout: page
 title: A simple approach to rotationally invariant machine learning of a vector quantity
 description: with background image
-img: assets/img/rotation.png
+img: assets/img/rpr2.png
 importance: 1
 category: research
 related_publications: true
