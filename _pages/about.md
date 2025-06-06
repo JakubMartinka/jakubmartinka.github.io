@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.jh-inst.cas.cz/department/department-of-theoretical-chemistry#department'>J. Heyrovský Institute of Physical Chemistry, Academy of Sciences of the Czech Republic</a><br><a href='https://physchem.cz/'>Department of Physical and Macromolecular Chemistry, Faculty of Sciences, Charles University</a><br> <strong># Machine Learning    # Nonadiabatic dynamics    # Quantum Chemistry</strong>.
+subtitle: <a href='https://www.jh-inst.cas.cz/department/department-of-theoretical-chemistry#department'>J. Heyrovský Institute of Physical Chemistry, Academy of Sciences of the Czech Republic</a><br><a href='https://physchem.cz/'>Department of Physical and Macromolecular Chemistry, Faculty of Sciences, Charles University</a><br> <strong># Machine Learning # Nonadiabatic dynamics # Quantum Chemistry</strong>.
 
 profile:
   align: right
