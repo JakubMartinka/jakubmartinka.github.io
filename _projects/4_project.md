@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Photodissociation of vinyl bromide: a nonadiabatic molecular dynamics and machine learning study
+title: Photodissociation of vinyl bromide a nonadiabatic molecular dynamics and machine learning study
 description: another without an image
 img:
 importance: 3
