@@ -3,7 +3,7 @@ layout: page
 title: A Descriptor Is All You Need: Accurate Machine Learning of Nonadiabatic Coupling Vectors
 description: with background image
 img: assets/img/diayn2.png
-importance: 1
+importance: 2
 category: research
 related_publications: true
 ---
