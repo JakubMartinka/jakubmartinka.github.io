@@ -9,28 +9,6 @@ category: fun
 
 In this project, we investigated photodissociation of vinyl bromide and the ability of machine learning (ML) to accelerate nonadiabatic molecular dynamics (NAMD) simulations. Firstly we benchmarked electronic structure methods 
 
-\begin{table}
-\centering
-\caption*{Vertical excitation energies in eV of the chosen methods ADC(2) and CASSCF(8,6), experimental values and benchmark calculations of the EOM-CCSD method}
-    \begin{tabular}{l@{\hspace{1cm}}c@{\hspace{1cm}}c@{\hspace{1cm}}c@{\hspace{1cm}}c}
-    \toprule
-        State  & Exp.$^a$ & ADC(2) & CASSCF(8,6) & EOM-CCSD \\
-    \midrule                                                        
-        $T_1$ &  ---  & 4,37 & 4,20 & 4,36 \\    
-        $T_2$ &  ---  & 5,76 & 5,87 & ---  \\      
-        $T_3$ &  ---  & 6,26 & 6,28 & ---  \\      
-        $S_1$ &  5,70 & 6,25 & 6,31 & 6,39 \\
-        $S_2$ &  6,50 & 6,69 & 7,15 & 7,24 \\
-        $S_3$ &  ---  & 7,00 & 7,83 & 7,30 \\
-        $T_4$ &  ---  & 6,99 & 7,80 & ---  \\
-        $S_4$ &  ---  & 7,05 & 7,89 & 7,44 \\
-        $T_5$ &  ---  & 7,56 & 8,04 & ---  \\
-    \bottomrule
-    \end{tabular}\vspace{.3cm}
-    
-    {\footnotesize $^a$ J. Schander, and B. R. Russell, \textit{J. Am. Chem. Soc.}, \textbf{98}, 6900--6904 (1976).}
-\end{table}
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
