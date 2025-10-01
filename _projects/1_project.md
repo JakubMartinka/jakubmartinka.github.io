@@ -17,14 +17,14 @@ Predicting potential energy surfaces with machine learning is now easier than ev
 </div>
 
 The procedure consists of three steps:
-	
-	Rotate each molecular geometry into a canonical orientation defined by its tensor of inertia.
 
-	Predict the vector or tensor property in that orientation using any machine learning model trained on data in the canonical orientation.
-	
-	Rotate the predicted properties back to the original molecular orientation.
+<ul>
+	<li>Rotate each molecular geometry into a canonical orientation defined by its tensor of inertia.</li>
+	<li>Predict the vector or tensor property in that orientation using any machine learning model trained on data in the canonical orientation.</li>
+	<li>Rotate the predicted properties back to the original molecular orientation.</li>
+</ul>
 
-To test the method, we studied 1,2-dithioethane, a molecule whose dipole moment and polarizability vary with torsional motion. We trained a kernel ridge regression model using the relative-to-equilibrium descriptor, based on DFT/B3LYP/aug-cc-pVTZ calculations, and sampled the configurational space by running ground-state molecular dynamics. The selected points for the test set are shown in black:
+To test the method, we studied 1,2-dithioethane, a molecule whose dipole moment and polarizability vary with torsional motion. We trained a kernel ridge regression model using the relative-to-equilibrium descriptor, based on DFT&#47;B3LYP&#47;aug-cc-pVTZ calculations, and sampled the configurational space by running ground-state molecular dynamics. The selected points for the test set are shown in black:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
