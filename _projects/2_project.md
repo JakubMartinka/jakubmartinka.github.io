@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "A Descriptor Is All You Need: Accurate Machine Learning of Nonadiabatic Coupling Vectors"
+title: A Descriptor Is All You Need: Accurate Machine Learning of Nonadiabatic Coupling Vectors
 description: &#35; machine learning &#35; nonadiabatic couplings &#35; descriptor &#35; surface hopping
 img: assets/img/diayn2.png
 importance: 1
