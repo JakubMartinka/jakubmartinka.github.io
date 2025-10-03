@@ -1,7 +1,7 @@
 ---
 layout: page
 title: A simple approach to rotationally invariant machine learning of a vector quantity
-description: <strong>&#35; machine learning<strong> vector rotation dipole moment polarizability
+description: <div><strong>&#35; machine learning &#35; vector rotation &#35; dipole moment &#35; polarizability</strong></div>
 img: assets/img/rpr2.png
 importance: 1
 category: research
@@ -18,11 +18,11 @@ Predicting potential energy surfaces with machine learning is now easier than ev
 
 The procedure consists of three steps:
 
-<ul>
+<ol>
 	<li>Rotate each molecular geometry into a canonical orientation defined by its tensor of inertia.</li>
 	<li>Predict the vector or tensor property in that orientation using any machine learning model trained on data in the canonical orientation.</li>
 	<li>Rotate the predicted properties back to the original molecular orientation.</li>
-</ul>
+</ol>
 
 To test the method, we studied 1,2-dithioethane, a molecule whose dipole moment and polarizability vary with torsional motion. We trained a kernel ridge regression model using the relative-to-equilibrium descriptor, based on DFT&#47;B3LYP&#47;aug-cc-pVTZ calculations, and sampled the configurational space by running ground-state molecular dynamics. The selected points for the test set are shown in black:
 
