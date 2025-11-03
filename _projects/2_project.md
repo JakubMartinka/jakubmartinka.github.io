@@ -1,18 +1,15 @@
 ---
 layout: page
 title: A Descriptor Is All You Need: Accurate Machine Learning of Nonadiabatic Coupling Vectors
-description: machine learning nonadiabatic couplings descriptor surface hopping
+description: <div><strong>&#35; machine learning &#35; nonadiabatic couplings &#35; descriptor &#35; surface hopping</strong></div>
 img: assets/img/diayn2.png
 importance: 1
 category: research
 related_publications: true
 ---
 
-Machine learning (ML) has become a powerful tool in quantum chemistry, especially in molecular dynamics to predict potential energy surfaces.
-Fitting scalar values (such as energies) with ML models does not need to account for vectorial properties - the predicted energy is rotationally invariant.
-Models predicting vector or tensor properties, e.g. dipole moments or polarizability, need to satisfy rotational covariance.
-It means that various rotations of molecule's coordinates, reguires correspondingly rotated vectors. 
-Here we target the efficiency of such a goal, developing simple, but accurate and fast approach to machine learn vectorial properties.
+Nonadiabatic couplings (NACs) are the essential properties in photochemical simulations, particularly in . They dictate how molecules jump between electronic states during light-driven processes—key for understanding everything from vision to solar energy conversion. Traditionally, simulating these transitions requires Tully’s fewest-switches surface hopping (FSSH), a powerful but computationally intensive method. Running FSSH trajectories demands hundreds of thousands of expensive quantum chemical calculations, severely limiting the size of molecules and the number of trajectories we can study.
+Machine learning (ML) promises to change this—but predicting NACs is far from straightforward. Unlike energies or forces, NACs are vectorial, double-valued, and can spike near conical intersections (CIs), where two electronic states cross. Additionally, the arbitrary phase of quantum wave functions can flip NAC vectors, introducing inconsistencies that derail ML training.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
