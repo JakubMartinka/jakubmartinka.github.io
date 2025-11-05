@@ -8,7 +8,7 @@ category: research
 related_publications: true
 ---
 
-Nonadiabatic couplings (NACs) are the essential properties in photochemical simulations, particularly in . They dictate how molecules jump between electronic states during light-driven processes-key for understanding everything from vision to solar energy conversion. Traditionally, simulating these transitions requires Tully’s fewest-switches surface hopping (FSSH), a powerful but computationally intensive method. Running FSSH trajectories demands hundreds of thousands of expensive quantum chemical calculations, severely limiting the size of molecules and the number of trajectories we can study.
+Nonadiabatic couplings (NACs) are the essential properties in photochemical simulations, particularly in . They dictate how molecules jump between electronic states during light-driven processes-key for understanding everything from vision to solar energy conversion. Traditionally, simulating these transitions requires Tully's fewest-switches surface hopping (FSSH), a powerful but computationally intensive method. Running FSSH trajectories demands hundreds of thousands of expensive quantum chemical calculations, severely limiting the size of molecules and the number of trajectories we can study.
 Machine learning (ML) promises to change this-but predicting NACs is far from straightforward. Unlike energies or forces, NACs are vectorial, double-valued, and can spike near conical intersections (CIs), where two electronic states cross. Additionally, the arbitrary phase of quantum wave functions can flip NAC vectors, introducing inconsistencies that derail ML training.
 
 <div class="row">
