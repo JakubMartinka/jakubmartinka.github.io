@@ -1,15 +1,14 @@
 ---
 layout: page
-title: A descriptor is all you need: accurate machine learning of nonadiabatic coupling vectors
-description: <div><strong>&#35; machine learning &#35; nonadiabatic couplings &#35; descriptor &#35; surface hopping</strong></div>
+title: A simple approach to rotationally invariant machine learning of a vector quantity
+description: <div><strong>&#35; machine learning &#35; vector rotation &#35; dipole moment &#35; polarizability</strong></div>
 img: assets/img/rpr2.png
-importance: 2
+importance: 1
 category: research
 related_publications: true
 ---
 
-Nonadiabatic couplings (NACs) are the essential properties in photochemical simulations, particularly in . They dictate how molecules jump between electronic states during light-driven processes-key for understanding everything from vision to solar energy conversion. Traditionally, simulating these transitions requires Tully's fewest-switches surface hopping (FSSH), a powerful but computationally intensive method. Running FSSH trajectories demands hundreds of thousands of expensive quantum chemical calculations, severely limiting the size of molecules and the number of trajectories we can study.
-Machine learning (ML) promises to change this-but predicting NACs is far from straightforward. Unlike energies or forces, NACs are vectorial, double-valued, and can spike near conical intersections (CIs), where two electronic states cross. Additionally, the arbitrary phase of quantum wave functions can flip NAC vectors, introducing inconsistencies that derail ML training.
+Predicting potential energy surfaces with machine learning is now easier than ever. But once we move from scalar properties (like energy) to vectors or tensors (like dipole moments or polarizabilities), things get trickier. These properties must transform correctly under symmetry transformations - when a molecular geometry is rotated, the corresponding vector should rotate as well. While rotationally equivariant models can be used, we developed a simple and easy-to-use scheme (shown in the figure below), which we call rotate–predict–rotate (RPR).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
