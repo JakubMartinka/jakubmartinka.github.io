@@ -1,8 +1,8 @@
 ---
 layout: page
-title: A descriptor is all you need accurate machine learning of nonadiabatic coupling vectors
-description: <div><strong>&#35; machine learning &#35; vector rotation &#35; dipole moment &#35; polarizability</strong></div>
-img: assets/img/rpr2.png
+title: A descriptor is all you need&#58; accurate machine learning of nonadiabatic coupling vectors
+description: <div><strong>&#35; machine learning &#35; nonadiabatic couplings &#35; descriptor &#35; surface hopping</strong></div>
+img: assets/img/diayn2.png
 importance: 1
 category: research
 related_publications: true
