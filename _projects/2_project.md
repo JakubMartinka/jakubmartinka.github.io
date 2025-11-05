@@ -1,6 +1,6 @@
 ---
 layout: page
-title: A simple approach to rotationally invariant machine learning of a vector quantity
+title: A Descriptor Is All You Need: Accurate Machine Learning of Nonadiabatic Coupling Vectors
 description: <div><strong>&#35; machine learning &#35; vector rotation &#35; dipole moment &#35; polarizability</strong></div>
 img: assets/img/rpr2.png
 importance: 1
