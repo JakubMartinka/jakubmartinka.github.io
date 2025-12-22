@@ -8,8 +8,15 @@ category: research
 related_publications: true
 ---
 
-particularly in Tully’s fewest-switches surface hopping (FSSH). They dictate how molecules jump between electronic states during light-driven processes—key for understanding everything from vision to solar energy conversion. Traditionally, simulating these transitions requires Tully’s fewest-switches surface hopping (FSSH), a powerful but computationally intensive method. Running FSSH trajectories demands hundreds of thousands of expensive quantum chemical calculations, severely limiting the size of molecules and the number of trajectories we can study.
-Machine learning (ML) promises to change this—but predicting NACs is far from straightforward. Unlike energies or forces, NACs are vectorial, double-valued, and can spike near conical intersections (CIs), where two electronic states cross. Additionally, the arbitrary phase of quantum wave functions can flip NAC vectors, introducing inconsistencies that derail ML training.
+Machine Learning (ML) has achieved remarkable success in accelerating computer simulations, particularly for molecular dynamics of systems in their electronic ground state. Once excited states are involed in the processes of interest, however, it becomes necessary to fit all relevant adiabatic potential energy surfaces (PESs). While this already representing a significant challenge, it is also necessary to fit non-adiabatic couplings defined as
+
+$$
+\mathbf{h}_{ij} = \langle\Psi_i|\nabla_{\mathbf{R}}|\Psi_j\rangle,
+$$
+
+which govern transitions between states, for example in trajectory surface hopping schemes. Although robust protocols have been developed to accurately fit PESs, predicting NACs remains far from straightforward. NACs are vectorial properties, that depend on the molecular orientation. Additionaly, they diverge when two PESs approach each other, and the training set must be phase-corrected, since NACs are defined for pairs of electronic states and have an arbitraty sign.
+
+In this work, we make the fitting of NACs possible by introducing NAC-specific descriptor. A descriptor is an input to the ML model that represents molecular structure or corresponding properties. The overall workflow is shown in the following figure.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -17,21 +24,15 @@ Machine learning (ML) promises to change this—but predicting NACs is far from 
     </div>
 </div>
 
-
+The training set was generated using a previously developed acrive learning scheme. The resulting data set was phase-corrected using a newly developed iterative procedure. We then performed a benchmark of descriptors, which demonstrated that a physically motivated gradient difference is an excellent choice, leading to the most accurate fits. Combined with multi-state ANI (MS-ANI) models for PESs, this approach enabled simulations of the first excited-state decay of fulvene (see figure below).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/desc_rmse.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/populations_fulvene.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pol.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Scatterplots showing the DFT dipole moment (left) and polarizability components (right) of the test set consisting of 1200 points with respect to ML predictions of the models trained on 1000 points. The dipole moment components were learned with the Matérn kernel, while for polarizability, the Gaussian kernel performed better. In both cases, the RExyzCl descriptor was used.
 </div>
 
-For more information, check out the paper: {% cite Martinka2025 %}.
+For detailed information, check out the paper: {% cite Martinka2025 %}. All simulations were carried out in <a href="http://mlatom.com/">MLatom</a>.
 
 {% raw %}
 
