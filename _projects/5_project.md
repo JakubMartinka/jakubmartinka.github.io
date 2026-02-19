@@ -33,10 +33,27 @@ class mlmodels():
             molecule.nacv = np.zeros((nstates,nstates,*molecule.get_xyz_coordinates().shape))
 ```
 
-This class example includes a condition that checks wheter energy difference is smaller than 0.5 eV, which significantly reduces the computational cost. Surface hopping can also be performed using only with quantum-chemical methods, provided they supply PESs, gradients and nonadiabatic couplings. Once the input files are prepared, simulations can be executed using the following code snippet:
+This class example includes a condition that checks wheter energy difference is smaller than 0.5 eV, which significantly reduces the computational cost. Surface hopping can also be performed using only with quantum-chemical methods, provided they supply PESs, gradients and nonadiabatic couplings. The total energy conservation can be controlled by a stop function. Once the input files are prepared, simulations can be executed using the following code snippet:
 
 ```python
 import mlatom as ml
+
+# Stop function
+def stop_function(mol, stop_state, **kwargs):
+    if stop_state is None:
+        stop_state = {}
+        stop_state['etot_0'] = mol.total_energy
+        stop_state['etot_prev'] = mol.total_energy
+    if abs(stop_state['etot_0'] - mol.total_energy) * ml.constants.hartree2eV > 0.5:
+        print("Terminating the trajectory: Etot drifted from t=0 more than 0.5 eV.")
+        return True, stop_state
+    else:
+        if abs(stop_state['etot_prev'] - mol.total_energy) * ml.constants.hartree2eV > 0.5:
+            print("Terminating the trajectory: Etot changed from previous step more than 0.5 eV.")
+            return True, stop_state
+        else:
+            stop_state['etot_prev'] = mol.total_energy
+            return False, stop_state
 
 # Load initial condition
 init_cond = ml.data.molecule.load('ic.json', format='json')
@@ -56,7 +73,8 @@ dyn = ml.namd.surface_hopping_md(
     rescale_velocity_direction='nacv',
     # or 'gradient difference' or 'momentum'
     nstates=4,
-    initial_state=3)
+    initial_state=3,
+    stop_function=stop_function)
 
 # Save trajectory in H5MD format to disk
 dyn.molecular_trajectory.dump('traj.h5', format='h5md')
