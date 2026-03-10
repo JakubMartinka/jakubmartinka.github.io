@@ -112,7 +112,7 @@ The resulting plot is shown below. Individual subplots can be selected to closel
     </div>
 </div>
 
-For detailed information, check out the paper: {% cite Martinka2025a %} or GitHub repository associated with this work: <a href="https://github.com/JakubMartinka/FSSH-in-MLatom">FSSH-in-MLatom</a>. All simulations were carried out in <a href="http://mlatom.com/">MLatom</a>.
+For detailed information, check out the paper: {% cite Martinka2026 %} or GitHub repository associated with this work: <a href="https://github.com/JakubMartinka/FSSH-in-MLatom">FSSH-in-MLatom</a>. All simulations were carried out in <a href="http://mlatom.com/">MLatom</a>.
 
 {% raw %}
 
