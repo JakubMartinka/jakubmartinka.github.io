@@ -397,7 +397,7 @@
 -
   index: 'map_80'
   country_name: 'JAPAN'
-  visited: false
+  visited: true
 
 -
   index: 'map_81'

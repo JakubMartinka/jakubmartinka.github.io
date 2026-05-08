@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: I am interested in accelerating nonadiabatic molecular dynamics simulations by machine learning.
 nav: true

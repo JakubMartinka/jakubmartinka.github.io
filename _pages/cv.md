@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /assets/pdf/CV_JakubMartinka.pdf
-title: cv
+title: CV
 nav: true
 nav_order: 5
 cv_pdf: CV_JakubMartinka.pdf

@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /travelmap/
-title: travel map
+title: Travel map
 css: ['assets/plugins/travelmap/css/custom.css']
 nav: true
 nav_order: 6
