@@ -4,7 +4,8 @@ title: Flexible Framework for Surface Hopping&#58; From Hybrid Schemes for Machi
 description: <div><strong>&#35; machine learning &#35; nonadiabatic molecular dynamics &#35; surface hopping &#35; curvature-driven schemes </strong></div>
 img: assets/img/ffssh.png
 importance: 1
-category: research
+category: publication
+permalink: /publications/surface-hopping-framework/
 related_publications: true
 ---
 
@@ -84,7 +85,7 @@ MLatom provides a wide range of interfaces to both quantum-chemical methods and 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/populations_fulvene_traj.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/populations_fulvene_traj.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -108,7 +109,7 @@ The resulting plot is shown below. Individual subplots can be selected to closel
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/analysis_nacs_traj_0.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/analysis_nacs_traj_0.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

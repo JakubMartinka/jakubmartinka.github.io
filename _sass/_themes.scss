@@ -3,37 +3,37 @@
  ******************************************************************************/
 
 :root {
-  --global-bg-color: #{$white-color};
-  --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
-  --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
-  --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #{$white-color};
-  --global-highlight-color: #{$red-color-dark};
-  --global-back-to-top-bg-color: rgba(#{red($black-color)}, #{green($black-color)}, #{blue($black-color)}, 0.4);
-  --global-back-to-top-text-color: #{$white-color};
-  --global-newsletter-bg-color: #{$white-color};
-  --global-newsletter-text-color: #{$black-color};
+  --global-bg-color: #{$gruvbox-light-bg0};
+  --global-code-bg-color: #{$gruvbox-light-bg0-s};
+  --global-text-color: #{$gruvbox-light-fg1};
+  --global-text-color-light: #{$gruvbox-light-fg4};
+  --global-theme-color: #{$gruvbox-light-orange};
+  --global-hover-color: #{$gruvbox-light-orange};
+  --global-hover-text-color: #{$gruvbox-light-bg0};
+  --global-footer-bg-color: #{$gruvbox-light-fg1};
+  --global-footer-text-color: #{$gruvbox-light-bg1};
+  --global-footer-link-color: #{$gruvbox-light-bg0};
+  --global-distill-app-color: #{$gruvbox-light-fg4};
+  --global-divider-color: rgba(60, 56, 54, 0.15);
+  --global-card-bg-color: #{$gruvbox-light-bg0-h};
+  --global-highlight-color: #{$gruvbox-light-red};
+  --global-back-to-top-bg-color: rgba(60, 56, 54, 0.4);
+  --global-back-to-top-text-color: #{$gruvbox-light-bg0};
+  --global-newsletter-bg-color: #{$gruvbox-light-bg0};
+  --global-newsletter-text-color: #{$gruvbox-light-fg1};
 
-  --global-tip-block: #42b983;
-  --global-tip-block-bg: #e2f5ec;
-  --global-tip-block-text: #215d42;
-  --global-tip-block-title: #359469;
-  --global-warning-block: #e7c000;
-  --global-warning-block-bg: #fff8d8;
-  --global-warning-block-text: #6b5900;
-  --global-warning-block-title: #b29400;
-  --global-danger-block: #c00;
-  --global-danger-block-bg: #ffe0e0;
-  --global-danger-block-text: #600;
-  --global-danger-block-title: #c00;
+  --global-tip-block: #{$gruvbox-light-green};
+  --global-tip-block-bg: #{$gruvbox-light-bg0-s};
+  --global-tip-block-text: #{$gruvbox-light-fg1};
+  --global-tip-block-title: #{$gruvbox-light-green};
+  --global-warning-block: #{$gruvbox-light-yellow};
+  --global-warning-block-bg: #{$gruvbox-light-bg0-s};
+  --global-warning-block-text: #{$gruvbox-light-fg1};
+  --global-warning-block-title: #{$gruvbox-light-yellow};
+  --global-danger-block: #{$gruvbox-light-red};
+  --global-danger-block-bg: #{$gruvbox-light-bg0-s};
+  --global-danger-block-text: #{$gruvbox-light-fg1};
+  --global-danger-block-title: #{$gruvbox-light-red};
 
   #light-toggle-system {
     padding-left: 10px;
@@ -68,36 +68,37 @@
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #{$grey-color-dark};
-  --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
-  --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{$grey-900};
-  --global-back-to-top-bg-color: rgba(#{red($white-color)}, #{green($white-color)}, #{blue($white-color)}, 0.5);
-  --global-back-to-top-text-color: #{$black-color};
-  --global-newsletter-bg-color: #{$grey-color-light};
-  --global-newsletter-text-color: #{$grey-color-dark};
+  --global-bg-color: #{$gruvbox-dark-bg0};
+  --global-code-bg-color: #{$gruvbox-dark-bg1};
+  --global-text-color: #{$gruvbox-dark-fg1};
+  --global-text-color-light: #{$gruvbox-dark-fg4};
+  --global-theme-color: #{$gruvbox-dark-orange};
+  --global-hover-color: #{$gruvbox-dark-orange};
+  --global-hover-text-color: #{$gruvbox-dark-bg0};
+  --global-footer-bg-color: #{$gruvbox-dark-bg0-h};
+  --global-footer-text-color: #{$gruvbox-dark-fg4};
+  --global-footer-link-color: #{$gruvbox-dark-fg1};
+  --global-distill-app-color: #{$gruvbox-dark-fg4};
+  --global-divider-color: #{$gruvbox-dark-bg2};
+  --global-card-bg-color: #{$gruvbox-dark-bg0-s};
+  --global-highlight-color: #{$gruvbox-dark-red};
+  --global-back-to-top-bg-color: rgba(235, 219, 178, 0.5);
+  --global-back-to-top-text-color: #{$gruvbox-dark-bg0};
+  --global-newsletter-bg-color: #{$gruvbox-dark-bg1};
+  --global-newsletter-text-color: #{$gruvbox-dark-fg1};
 
-  --global-tip-block: #42b983;
-  --global-tip-block-bg: #e2f5ec;
-  --global-tip-block-text: #215d42;
-  --global-tip-block-title: #359469;
-  --global-warning-block: #e7c000;
-  --global-warning-block-bg: #fff8d8;
-  --global-warning-block-text: #6b5900;
-  --global-warning-block-title: #b29400;
-  --global-danger-block: #c00;
-  --global-danger-block-bg: #ffe0e0;
-  --global-danger-block-text: #600;
-  --global-danger-block-title: #c00;
+  --global-tip-block: #{$gruvbox-dark-green};
+  --global-tip-block-bg: #{$gruvbox-dark-bg0-s};
+  --global-tip-block-text: #{$gruvbox-dark-fg1};
+  --global-tip-block-title: #{$gruvbox-dark-green};
+  --global-warning-block: #{$gruvbox-dark-yellow};
+  --global-warning-block-bg: #{$gruvbox-dark-bg0-s};
+  --global-warning-block-text: #{$gruvbox-dark-fg1};
+  --global-warning-block-title: #{$gruvbox-dark-yellow};
+  --global-danger-block: #{$gruvbox-dark-red};
+  --global-danger-block-bg: #{$gruvbox-dark-bg0-s};
+  --global-danger-block-text: #{$gruvbox-dark-fg1};
+  --global-danger-block-title: #{$gruvbox-dark-red};
 
   .repo-img-light {
     display: none;

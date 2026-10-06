@@ -2,7 +2,7 @@
 ---
 <div class="row">
   {% if site.enable_publication_thumbnails %}
-    <div class="col col-sm-2 abbr">
+    <div class="col col-sm-3 abbr">
       {%- if entry.abbr -%}
         {%- if site.data.venues[entry.abbr] -%}
           {% assign venue_style = null %}
@@ -45,7 +45,7 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-9{% else %}col-sm-10{% endif %}">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
@@ -174,8 +174,7 @@
       {% include hook/bib.liquid %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ (entryyear). }} DOI:<a href="
-https://doi.org/{{ entry.doi }}" target="_blank">{{ entry.doi }}</a> {% endcapture %}
+    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ (entryyear). }}{% if entry.doi %} DOI:<a href="https://doi.org/{{ entry.doi }}" target="_blank">{{ entry.doi }}</a>{% elsif entry.arxiv %} arXiv:<a href="https://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">{{ entry.arxiv }}</a>{% endif %} {% endcapture %}
     <div class="periodical">
       {{ periodical | strip }}
     </div>
@@ -185,6 +184,14 @@ https://doi.org/{{ entry.doi }}" target="_blank">{{ entry.doi }}</a> {% endcaptu
 
     <!-- Links/Buttons -->
     <div class="links">
+      {% if entry.summary %}
+        <a href="{{ entry.summary | relative_url }}" class="btn btn-sm z-depth-0" role="button">Post</a>
+      {% endif %}
+      {% if entry.doi %}
+        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>
+      {% elsif entry.arxiv %}
+        <a href="https://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper</a>
+      {% endif %}
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
           {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
@@ -193,11 +200,8 @@ https://doi.org/{{ entry.doi }}" target="_blank">{{ entry.doi }}</a> {% endcaptu
       {% if entry.abstract %}
         <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       {% endif %}
-      {% if entry.arxiv %}
+      {% if entry.arxiv and entry.doi %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
-      {% endif %}
-      {% if entry.bibtex_show %}
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
       {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
@@ -229,7 +233,9 @@ https://doi.org/{{ entry.doi }}" target="_blank">{{ entry.doi }}</a> {% endcaptu
         <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
       {% endif %}
       {% if entry.code %}
-        <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+        <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">
+          {%- if entry.code contains 'github.com' %}<i class="fa-brands fa-github"></i> GitHub{% else %}Code{% endif -%}
+        </a>
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
@@ -248,6 +254,22 @@ https://doi.org/{{ entry.doi }}" target="_blank">{{ entry.doi }}</a> {% endcaptu
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
+      {% if entry.bibtex_show %}
+        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+      {% endif %}
+      {% if site.enable_publication_badges.google_scholar and entry.google_scholar_id %}
+        <a
+          class="scholar-badge"
+          href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.scholar_userid }}&citation_for_view={{ site.scholar_userid }}:{{ entry.google_scholar_id }}"
+          aria-label="Google Scholar link"
+          target="_blank"
+        >
+          <img
+            src="https://img.shields.io/badge/scholar-{% google_scholar_citations site.scholar_userid entry.google_scholar_id %}-4285F4?logo=googlescholar&labelColor=beige"
+            alt="{% google_scholar_citations site.scholar_userid entry.google_scholar_id %} Google Scholar citations"
+          >
+        </a>
+      {% endif %}
     </div>
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = false %}
@@ -264,7 +286,7 @@ https://doi.org/{{ entry.doi }}" target="_blank">{{ entry.doi }}</a> {% endcaptu
       {% if entry.google_scholar_id %}
         {% assign entry_has_google_scholar_badge = true %}
       {% endif %}
-      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge %}
+      {% if entry_has_altmetric_badge or entry_has_dimensions_badge %}
         <div class="badges">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
@@ -300,18 +322,6 @@ https://doi.org/{{ entry.doi }}" target="_blank">{{ entry.doi }}</a> {% endcaptu
               data-legend="hover-right"
               style="margin-bottom: 3px;"
             ></span>
-          {% endif %}
-          {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
-            <a
-              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.scholar_userid }}&citation_for_view={{ site.scholar_userid }}:{{ entry.google_scholar_id }}"
-              aria-label="Google Scholar link"
-              role="button"
-            >
-              <img
-                src="https://img.shields.io/badge/scholar-{% google_scholar_citations site.scholar_userid entry.google_scholar_id %}-4285F4?logo=googlescholar&labelColor=beige"
-                alt="{% google_scholar_citations site.scholar_userid entry.google_scholar_id %} Google Scholar citations"
-              >
-            </a>
           {% endif %}
         </div>
       {% endif %}

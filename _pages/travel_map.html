@@ -1,0 +1,495 @@
+---
+layout: page
+permalink: /travelmap/
+title: Travel map
+description: Countries I have visited so far. Drag the globe to spin it, or pick a country below.
+nav: true
+nav_order: 7
+---
+
+{% assign travel = site.data.travel %}
+{% assign continents = travel.visited | group_by: "continent" %}
+
+<style>
+  .tm {
+    --tm-ocean: #f2e5bc;
+    --tm-land: #d5c4a1;
+    --tm-border: #fbf1c7;
+    --tm-grid: rgba(60, 56, 54, 0.08);
+    --tm-visited: #d65d0e;
+    --tm-home: #689d6a;
+    --tm-focus: #d79921;
+    --tm-rim: #bdae93;
+  }
+  html[data-theme="dark"] .tm {
+    --tm-ocean: #32302f;
+    --tm-land: #504945;
+    --tm-border: #282828;
+    --tm-grid: rgba(235, 219, 178, 0.07);
+    --tm-visited: #fe8019;
+    --tm-home: #8ec07c;
+    --tm-focus: #fabd2f;
+    --tm-rim: #665c54;
+  }
+
+  .tm-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .tm-stat {
+    background: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+  .tm-stat-value {
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--tm-visited);
+    font-variant-numeric: tabular-nums;
+  }
+  .tm-stat-label {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+
+  .tm-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .tm-modes {
+    display: inline-flex;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .tm-modes button {
+    border: 0;
+    background: transparent;
+    color: var(--global-text-color);
+    padding: 0.3rem 0.9rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  .tm-modes button[aria-pressed="true"] {
+    background: var(--tm-visited);
+    color: var(--global-bg-color);
+  }
+  .tm-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+  .tm-legend span::before {
+    content: "";
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.35rem;
+    border-radius: 3px;
+    vertical-align: -0.1rem;
+    background: var(--tm-swatch);
+  }
+
+  .tm-map {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    touch-action: none;
+    user-select: none;
+  }
+  .tm-map svg {
+    max-width: 100%;
+    height: auto;
+    cursor: grab;
+  }
+  .tm-map svg:active {
+    cursor: grabbing;
+  }
+  .tm-ocean {
+    fill: var(--tm-ocean);
+    stroke: var(--tm-rim);
+    stroke-width: 1;
+  }
+  .tm-grid {
+    fill: none;
+    stroke: var(--tm-grid);
+    stroke-width: 0.6;
+  }
+  .tm-country {
+    fill: var(--tm-land);
+    transition: fill 0.15s;
+  }
+  .tm-country.is-visited {
+    fill: var(--tm-visited);
+  }
+  .tm-country.is-home {
+    fill: var(--tm-home);
+  }
+  .tm-country:hover,
+  .tm-country.is-focus {
+    fill: var(--tm-focus);
+  }
+  .tm-borders {
+    fill: none;
+    stroke: var(--tm-border);
+    stroke-width: 0.5;
+    stroke-linejoin: round;
+    pointer-events: none;
+  }
+  .tm-dot {
+    fill: var(--tm-visited);
+    stroke: var(--tm-border);
+    stroke-width: 1.5;
+  }
+  .tm-dot.is-place {
+    fill: var(--global-text-color);
+  }
+  .tm-dot.is-focus,
+  .tm-dot:hover {
+    fill: var(--tm-focus);
+  }
+  .tm-tip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--global-text-color);
+    color: var(--global-bg-color);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    transform: translate(-50%, -140%);
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+  .tm-tip.is-visible {
+    opacity: 1;
+  }
+  .tm-loading {
+    padding: 4rem 0;
+    color: var(--global-text-color-light);
+  }
+
+  .tm-continent {
+    margin-top: 1.5rem;
+  }
+  .tm-continent h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .tm-continent h3 small {
+    color: var(--global-text-color-light);
+    font-weight: normal;
+  }
+  .tm-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .tm-chip {
+    border: 1px solid var(--global-divider-color);
+    background: var(--global-card-bg-color);
+    color: var(--global-text-color);
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+  .tm-chip:hover,
+  .tm-chip:focus-visible {
+    border-color: var(--tm-focus);
+    color: var(--tm-visited);
+  }
+  .tm-chip.is-home {
+    border-color: var(--tm-home);
+  }
+
+  @media (max-width: 576px) {
+    .tm-stat-value {
+      font-size: 1.4rem;
+    }
+  }
+</style>
+
+<div class="tm">
+  <div class="tm-stats">
+    <div class="tm-stat">
+      <div class="tm-stat-value">{{ travel.visited.size }}</div>
+      <div class="tm-stat-label">countries</div>
+    </div>
+    <div class="tm-stat">
+      <div class="tm-stat-value">{{ travel.visited.size | times: 100.0 | divided_by: 195 | round }}%</div>
+      <div class="tm-stat-label">of the world's 195</div>
+    </div>
+    <div class="tm-stat">
+      <div class="tm-stat-value">{{ continents.size }}</div>
+      <div class="tm-stat-label">continents</div>
+    </div>
+  </div>
+
+  <div class="tm-toolbar">
+    <div class="tm-modes" role="group" aria-label="Map view">
+      <button type="button" data-mode="globe" aria-pressed="true">Globe</button>
+      <button type="button" data-mode="flat" aria-pressed="false">Map</button>
+    </div>
+    <div class="tm-legend">
+      <span style="--tm-swatch: var(--tm-home)">Home</span>
+      <span style="--tm-swatch: var(--tm-visited)">Visited</span>
+      <span style="--tm-swatch: var(--tm-land)">Not yet</span>
+    </div>
+  </div>
+
+  <div class="tm-map" id="tm-map">
+    <div class="tm-loading">Loading map…</div>
+    <div class="tm-tip" id="tm-tip"></div>
+  </div>
+
+  {% for continent in continents %}
+    <div class="tm-continent">
+      <h3>
+        {{ continent.name }} <small>{{ continent.items.size }}</small>
+      </h3>
+      <div class="tm-chips">
+        {% assign countries = continent.items | sort: "name" %}
+        {% for country in countries %}
+          <button type="button" class="tm-chip{% if country.home %} is-home{% endif %}" data-id="{{ country.id }}">{{ country.name }}</button>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script
+  defer
+  src="{{ site.third_party_libraries.d3.url.js }}"
+  integrity="{{ site.third_party_libraries.d3.integrity.js }}"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"
+  integrity="sha256-Jc0CrkhsxQY+AhWk5M+xXeg3AMh6xIusTVfcaq8+u4k="
+  crossorigin="anonymous"
+></script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const travel = {{ travel | jsonify }};
+    const visited = new Map(travel.visited.map((c) => [c.id, c]));
+    const container = document.getElementById("tm-map");
+    const tip = document.getElementById("tm-tip");
+    const sphere = { type: "Sphere" };
+    const graticule = d3.geoGraticule10();
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let mode = "globe";
+    let rotation = [-15, -35, 0]; // start over Europe
+    let projection, path, svg, countries, borders, dots;
+    let spinning = !reduceMotion;
+    let hovering = false;
+    let dragging = false;
+    let animating = false;
+
+    fetch("{{ '/assets/json/countries-110m.json' | relative_url }}")
+      .then((r) => r.json())
+      .then((world) => {
+        container.querySelector(".tm-loading").remove();
+        countries = topojson.feature(world, world.objects.countries).features;
+        borders = topojson.mesh(world, world.objects.countries, (a, b) => a !== b);
+        const drawn = new Set(countries.map((f) => f.id));
+        dots = travel.visited
+          .filter((c) => c.coords && !drawn.has(c.id))
+          .map((c) => Object.assign({ kind: "country" }, c))
+          .concat((travel.places || []).map((p) => Object.assign({ kind: "place" }, p)));
+        build();
+        let lastWidth = container.clientWidth;
+        new ResizeObserver(() => {
+          if (container.clientWidth === lastWidth) return;
+          lastWidth = container.clientWidth;
+          build();
+        }).observe(container);
+        d3.timer(spin);
+      })
+      .catch(() => {
+        container.querySelector(".tm-loading").textContent = "The map could not be loaded.";
+      });
+
+    function build() {
+      const width = Math.round(container.clientWidth);
+      if (!width) return;
+      let height;
+      if (mode === "globe") {
+        height = Math.min(width, 520);
+        projection = d3.geoOrthographic().clipAngle(90).rotate(rotation).fitExtent([[4, 4], [width - 4, height - 4]], sphere);
+      } else {
+        projection = d3.geoNaturalEarth1().rotate([rotation[0], 0, 0]).fitWidth(width, sphere);
+        height = Math.ceil(d3.geoPath(projection).bounds(sphere)[1][1]);
+      }
+      path = d3.geoPath(projection);
+
+      d3.select(container).select("svg").remove();
+      svg = d3
+        .select(container)
+        .insert("svg", ".tm-tip")
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .attr("width", width)
+        .attr("height", height)
+        .attr("role", "img")
+        .attr("aria-label", `World map with ${travel.visited.length} visited countries highlighted`)
+        .on("pointerenter", () => (hovering = true))
+        .on("pointerleave", () => {
+          hovering = false;
+          hideTip();
+        });
+
+      svg.append("path").attr("class", "tm-ocean");
+      svg.append("path").attr("class", "tm-grid");
+      svg
+        .append("g")
+        .selectAll("path")
+        .data(countries)
+        .join("path")
+        .attr("class", (d) => {
+          const c = visited.get(d.id);
+          return "tm-country" + (c ? (c.home ? " is-home" : " is-visited") : "");
+        })
+        .attr("data-id", (d) => d.id)
+        .on("pointermove", (event, d) => {
+          const c = visited.get(d.id);
+          showTip(event, (c ? c.name : d.properties.name) + (c ? (c.home ? " · home" : " · visited") : ""));
+        })
+        .on("pointerleave", hideTip)
+        .on("click", (event, d) => visited.has(d.id) && focus(d.id));
+      svg.append("path").attr("class", "tm-borders");
+      svg
+        .append("g")
+        .selectAll("circle")
+        .data(dots)
+        .join("circle")
+        .attr("class", (d) => "tm-dot" + (d.kind === "place" ? " is-place" : ""))
+        .attr("data-id", (d) => d.id || null)
+        .attr("r", (d) => (d.kind === "place" ? 3.5 : 5))
+        .on("pointermove", (event, d) => showTip(event, d.kind === "place" ? `${d.name} · ${d.note}` : `${d.name} · visited`))
+        .on("pointerleave", hideTip);
+
+      svg.call(
+        d3
+          .drag()
+          .on("start", () => {
+            dragging = true;
+            spinning = false;
+            hideTip();
+          })
+          .on("drag", (event) => {
+            const k = 180 / (Math.PI * projection.scale());
+            const r = projection.rotate();
+            rotation = mode === "globe" ? [r[0] + event.dx * k, Math.max(-90, Math.min(90, r[1] - event.dy * k)), r[2]] : [r[0] + event.dx * k, rotation[1], 0];
+            projection.rotate(mode === "globe" ? rotation : [rotation[0], 0, 0]);
+            render();
+          })
+          .on("end", () => (dragging = false))
+      );
+
+      render();
+    }
+
+    function render() {
+      svg.select(".tm-ocean").attr("d", path(sphere));
+      svg.select(".tm-grid").attr("d", path(graticule));
+      svg.selectAll(".tm-country").attr("d", path);
+      svg.select(".tm-borders").attr("d", path(borders));
+      const r = projection.rotate();
+      const center = [-r[0], -r[1]];
+      svg.selectAll(".tm-dot").each(function (d) {
+        const hidden = mode === "globe" && d3.geoDistance(d.coords, center) > Math.PI / 2;
+        const p = projection(d.coords);
+        d3.select(this)
+          .attr("display", hidden || !p ? "none" : null)
+          .attr("transform", p ? `translate(${p})` : null);
+      });
+    }
+
+    let last = null;
+    function spin(elapsed) {
+      const dt = last === null ? 0 : elapsed - last;
+      last = elapsed;
+      if (mode !== "globe" || !spinning || hovering || dragging || animating) return;
+      const r = projection.rotate();
+      rotation = [r[0] + dt * 0.006, r[1], r[2]];
+      projection.rotate(rotation);
+      render();
+    }
+
+    // Centre of the largest polygon, so e.g. France is not centred between Europe and French Guiana.
+    function centerOf(id) {
+      const feature = countries.find((f) => f.id === id);
+      if (!feature) return visited.get(id).coords;
+      if (feature.geometry.type !== "MultiPolygon") return d3.geoCentroid(feature);
+      const largest = d3.greatest(feature.geometry.coordinates, (p) => d3.geoArea({ type: "Polygon", coordinates: p }));
+      return d3.geoCentroid({ type: "Polygon", coordinates: largest });
+    }
+
+    function focus(id) {
+      highlight(id, true);
+      setTimeout(() => highlight(id, false), 1800);
+      if (mode !== "globe") return;
+      spinning = false;
+      animating = true;
+      const [lon, lat] = centerOf(id);
+      const from = projection.rotate();
+      let toLon = -lon;
+      while (toLon - from[0] > 180) toLon -= 360;
+      while (toLon - from[0] < -180) toLon += 360;
+      const interpolate = d3.interpolate(from, [toLon, -lat, 0]);
+      d3.transition()
+        .duration(reduceMotion ? 0 : 1100)
+        .tween("rotate", () => (t) => {
+          rotation = interpolate(t);
+          projection.rotate(rotation);
+          render();
+        })
+        .on("end", () => (animating = false));
+    }
+
+    function highlight(id, on) {
+      if (!svg) return;
+      svg.selectAll(`[data-id="${id}"]`).classed("is-focus", on);
+    }
+
+    function showTip(event, text) {
+      const [x, y] = d3.pointer(event, container);
+      tip.textContent = text;
+      tip.style.left = `${x}px`;
+      tip.style.top = `${y}px`;
+      tip.classList.add("is-visible");
+    }
+
+    function hideTip() {
+      tip.classList.remove("is-visible");
+    }
+
+    document.querySelectorAll(".tm-modes button").forEach((button) =>
+      button.addEventListener("click", () => {
+        if (button.dataset.mode === mode || !countries) return;
+        mode = button.dataset.mode;
+        document.querySelectorAll(".tm-modes button").forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+        build();
+      })
+    );
+
+    document.querySelectorAll(".tm-chip").forEach((chip) => {
+      const id = chip.dataset.id;
+      chip.addEventListener("mouseenter", () => highlight(id, true));
+      chip.addEventListener("mouseleave", () => highlight(id, false));
+      chip.addEventListener("click", () => countries && focus(id));
+    });
+  });
+</script>

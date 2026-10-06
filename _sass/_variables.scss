@@ -30,6 +30,31 @@ $grey-900: #212529;
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
+// Gruvbox palette (https://github.com/morhetz/gruvbox)
+$gruvbox-dark-bg0-h: #1d2021;
+$gruvbox-dark-bg0: #282828;
+$gruvbox-dark-bg0-s: #32302f;
+$gruvbox-dark-bg1: #3c3836;
+$gruvbox-dark-bg2: #504945;
+$gruvbox-dark-fg1: #ebdbb2;
+$gruvbox-dark-fg4: #a89984;
+$gruvbox-dark-gray: #928374;
+$gruvbox-dark-red: #fb4934;
+$gruvbox-dark-green: #b8bb26;
+$gruvbox-dark-yellow: #fabd2f;
+$gruvbox-dark-orange: #fe8019;
+
+$gruvbox-light-bg0-h: #f9f5d7;
+$gruvbox-light-bg0: #fbf1c7;
+$gruvbox-light-bg0-s: #f2e5bc;
+$gruvbox-light-bg1: #ebdbb2;
+$gruvbox-light-fg1: #3c3836;
+$gruvbox-light-fg4: #7c6f64;
+$gruvbox-light-red: #9d0006;
+$gruvbox-light-green: #79740e;
+$gruvbox-light-yellow: #b57614;
+$gruvbox-light-orange: #af3a03;
+
 // Theme colors
 
 $code-bg-color-light: rgba($purple-color, 0.05);

@@ -4,7 +4,7 @@ title: "Photodissociation of vinyl bromide: a nonadiabatic molecular dynamics an
 description: <div><strong>&#35; nonadiabatic molecular dynamics &#35; surface hopping</strong></div> 
 img: assets/img/spectrum_bret.png 
 importance: 3
-category: fun
+category: other
 ---
 
 Coming soon!

@@ -1,0 +1,46 @@
+# Travel map data (_pages/travel_map.md).
+# id: ISO 3166-1 numeric code (https://en.wikipedia.org/wiki/ISO_3166-1_numeric).
+# Countries too small for the map (e.g. Maldives) need `coords: [longitude, latitude]` and are drawn as a dot.
+
+places:
+  - name: Zlín
+    note: Hometown
+    coords: [17.66, 49.22]
+  - name: Prague
+    note: Work
+    coords: [14.42, 50.08]
+
+visited:
+  - { id: "203", name: Czechia, continent: Europe, home: true }
+  - { id: "040", name: Austria, continent: Europe }
+  - { id: "070", name: Bosnia and Herzegovina, continent: Europe }
+  - { id: "191", name: Croatia, continent: Europe }
+  - { id: "208", name: Denmark, continent: Europe }
+  - { id: "233", name: Estonia, continent: Europe }
+  - { id: "246", name: Finland, continent: Europe }
+  - { id: "250", name: France, continent: Europe }
+  - { id: "276", name: Germany, continent: Europe }
+  - { id: "300", name: Greece, continent: Europe }
+  - { id: "348", name: Hungary, continent: Europe }
+  - { id: "380", name: Italy, continent: Europe }
+  - { id: "428", name: Latvia, continent: Europe }
+  - { id: "440", name: Lithuania, continent: Europe }
+  - { id: "528", name: Netherlands, continent: Europe }
+  - { id: "578", name: Norway, continent: Europe }
+  - { id: "616", name: Poland, continent: Europe }
+  - { id: "703", name: Slovakia, continent: Europe }
+  - { id: "705", name: Slovenia, continent: Europe }
+  - { id: "724", name: Spain, continent: Europe }
+  - { id: "752", name: Sweden, continent: Europe }
+  - { id: "756", name: Switzerland, continent: Europe }
+  - { id: "826", name: United Kingdom, continent: Europe }
+  - { id: "156", name: China, continent: Asia }
+  - { id: "356", name: India, continent: Asia }
+  - { id: "376", name: Israel, continent: Asia }
+  - { id: "392", name: Japan, continent: Asia }
+  - { id: "462", name: Maldives, continent: Asia, coords: [73.22, 3.20] }
+  - { id: "410", name: South Korea, continent: Asia }
+  - { id: "144", name: Sri Lanka, continent: Asia }
+  - { id: "124", name: Canada, continent: North America }
+  - { id: "840", name: United States, continent: North America }
+  - { id: "788", name: Tunisia, continent: Africa }

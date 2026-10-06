@@ -4,7 +4,8 @@ title: A descriptor is all you need&#58; accurate machine learning of nonadiabat
 description: <div><strong>&#35; machine learning &#35; nonadiabatic couplings &#35; descriptor &#35; surface hopping</strong></div>
 img: assets/img/diayn2.png
 importance: 1
-category: research
+category: publication
+permalink: /publications/nac-descriptor/
 related_publications: true
 ---
 
@@ -20,7 +21,7 @@ In this work, we make the fitting of NACs possible by introducing NAC-specific d
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/chart.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/chart.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -28,11 +29,11 @@ The training set was generated using a previously developed acrive learning sche
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/populations_fulvene.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/populations_fulvene.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
-For detailed information, check out the paper: {% cite Martinka2025 %}. All simulations were carried out in <a href="http://mlatom.com/">MLatom</a>.
+For detailed information, check out the paper: {% cite Martinka2025 %} or GitHub repository associated with this work: <a href="https://github.com/JakubMartinka/Fulvene-ML-FSSH">Fulvene-ML-FSSH</a>. All simulations were carried out in <a href="http://mlatom.com/">MLatom</a>.
 
 {% raw %}
 

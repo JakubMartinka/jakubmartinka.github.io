@@ -689,9 +689,11 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.75rem;
 
       .preview {
+        width: 100%;
+        background: #fff;
       }
 
       .abbr {
@@ -749,6 +751,17 @@ footer.sticky-bottom {
       }
 
       .links {
+        a.scholar-badge {
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 0.25rem;
+
+          img {
+            display: block;
+            height: 20px;
+          }
+        }
+
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
@@ -1175,6 +1188,29 @@ ninja-keys::part(ninja-input-wrapper) {
   padding: 8px 12px;
 }
 
+// Figures in project posts: keep tall figures from filling the whole screen
+.project-post figure img {
+  width: auto;
+  max-width: 100%;
+  max-height: 420px;
+  display: block;
+  margin: 0 auto;
+}
+
+.post-header-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 2rem;
+
+  .bibsearch-form-input {
+    max-width: 240px;
+    margin: 0;
+  }
+}
+
 .newsletter-form-input:focus {
   border-color: var(--global-theme-color) !important;
 }
@@ -1303,4 +1339,120 @@ ninja-keys::part(ninja-input-wrapper) {
 ::highlight(search) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
+}
+
+// Home page (_pages/about.md)
+.home-intro {
+  font-size: 1.05rem;
+}
+
+.home-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0 0.5rem;
+
+  span {
+    font-size: 0.8rem;
+    padding: 0.15rem 0.65rem;
+    border-radius: 999px;
+    color: var(--global-theme-color);
+    border: 1px solid var(--global-theme-color);
+  }
+}
+
+.home-section {
+  clear: both;
+  padding-top: 1.5rem;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.home-card {
+  display: block;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  padding: 1rem;
+  color: var(--global-text-color);
+
+  i {
+    font-size: 1.3rem;
+    color: var(--global-theme-color);
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    color: var(--global-text-color-light);
+  }
+}
+
+a.home-card {
+  transition:
+    border-color 0.15s,
+    transform 0.15s;
+
+  &:hover {
+    text-decoration: none;
+    border-color: var(--global-theme-color);
+    transform: translateY(-2px);
+  }
+}
+
+.home-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  i {
+    width: 1.2rem;
+    flex-shrink: 0;
+    text-align: center;
+    margin-top: 0.3rem;
+    color: var(--global-theme-color);
+  }
+}
+
+.home-note {
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+}
+
+// Back link on publication and project posts
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
 }

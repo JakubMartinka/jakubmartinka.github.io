@@ -2,12 +2,24 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
+  {% if page.collection == 'projects' %}
+    {% if page.category == 'publication' %}
+      <a class="back-link" href="{{ '/publications/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> Publications</a>
+    {% else %}
+      <a class="back-link" href="{{ '/projects/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> Projects</a>
+    {% endif %}
+  {% endif %}
+  <header class="post-header{% if page.header_search %} post-header-search{% endif %}">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-description">{{ page.description }}</p>
+    {% if page.header_search %}
+      {% include bib_search.liquid %}
+    {% endif %}
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
   </header>
 
-  <article>
+  <article{% if page.collection == 'projects' %} class="project-post"{% endif %}>
     {{ content }}
   </article>
 

@@ -4,7 +4,8 @@ title: A simple approach to rotationally invariant machine learning of a vector 
 description: <div><strong>&#35; machine learning &#35; vector rotation &#35; dipole moment &#35; polarizability</strong></div>
 img: assets/img/rpr2.png
 importance: 1
-category: research
+category: publication
+permalink: /publications/rotationally-invariant-ml/
 related_publications: true
 ---
 
@@ -12,7 +13,7 @@ Predicting potential energy surfaces with machine learning is now easier than ev
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/rpr.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/rpr.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -28,7 +29,7 @@ To test the method, we studied 1,2-dithioethane, a molecule whose dipole moment 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/dihedral.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/dihedral.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -36,10 +37,10 @@ The machine learning models produced accurate, rotationally covariant prediction
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/dipole.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/dipole.png" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pol.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/pol.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
