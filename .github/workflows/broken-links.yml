@@ -48,5 +48,6 @@ jobs:
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
-          # removed md files that include liquid tags
-          args: --user-agent 'curl/7.54' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --exclude-path _posts/2023-04-24-videos.md --verbose --no-progress './**/*.md' './**/*.html'
+          # source files are checked before Jekyll renders them, so skip links that are still
+          # Liquid tags ({{ ... }}, URL-encoded as %7B%7B); the built site is checked by broken-links-site.yml
+          args: --user-agent 'curl/7.54' --exclude-path README.md --exclude-path _pages/404.md --exclude '%7B%7B' --verbose --no-progress './**/*.md' './**/*.html'
