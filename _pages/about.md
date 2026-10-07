@@ -36,7 +36,7 @@ My research focuses on machine learning for nonadiabatic molecular dynamics. I d
 <section class="home-section">
   <h2>Research</h2>
   <p>
-    Our group studies <em>ultrafast dynamics of molecules and clusters including nonadiabatic and spin–orbit effects</em>. If you would like to learn more about our research or my <a href="{{ '/projects/' | relative_url }}">projects</a>, feel free to reach out!
+    I study <em>ultrafast dynamics of molecules and clusters including nonadiabatic and spin–orbit effects</em>. If you would like to learn more about my research or <a href="{{ '/projects/' | relative_url }}">projects</a>, feel free to reach out!
   </p>
   <div class="home-cards">
     <div class="home-card">
@@ -52,7 +52,7 @@ My research focuses on machine learning for nonadiabatic molecular dynamics. I d
     <div class="home-card">
       <i class="fa-solid fa-code"></i>
       <h3>Software</h3>
-      <p>We contribute to the <a href="https://newtonx.org/">Newton-X</a> and <a href="http://mlatom.com/">MLatom</a> packages.</p>
+      <p>I contribute to the <a href="https://newtonx.org/">Newton-X</a> and <a href="http://mlatom.com/">MLatom</a> packages.</p>
     </div>
   </div>
   <p class="home-note">
