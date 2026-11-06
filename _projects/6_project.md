@@ -21,4 +21,4 @@ If the goal is only to estimate the time constant, there is a trick: the SOCs ca
 
 In this work, we look at how reliable such an accelerated scheme is, using silaethylene (CH<sub>2</sub>SiH<sub>2</sub>) as a test case. We trained machine learning (ML) models for the potential energy surfaces, nonadiabatic couplings and SOCs, building on our <a href="{{ '/publications/nac-descriptor/' | relative_url }}">NAC descriptor</a> and <a href="{{ '/publications/rotationally-invariant-ml/' | relative_url }}">rotate-predict-rotate</a> approaches, and used them to explore where ML can make the whole procedure more robust.
 
-For detailed information, check out the preprint: {% cite Martinka2026a %}. The ML part of this work was carried out in <a href="http://mlatom.com/">MLatom</a>.
+For detailed information, check out the paper: {% cite Martinka2026a %}. The ML part of this work was carried out in <a href="http://mlatom.com/">MLatom</a>.
